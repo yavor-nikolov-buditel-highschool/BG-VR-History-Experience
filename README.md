@@ -1,4 +1,3 @@
-Here is a **clean, professional, GitHub-standard README** with a strong focus on **running the project**, while still preserving your technical and architectural detail.
 
 ---
 
@@ -227,9 +226,3 @@ This project demonstrates how **Virtual Reality can transform education** by com
 The system is designed for **future expansion**, making it a scalable platform for presenting Bulgarian cultural heritage.
 
 ---
-
-If you want, I can next:
-
-* Optimize this for **GitHub SEO (badges, screenshots, GIFs)**
-* Add a **“Releases” section + download button UX**
-* Or tailor it for a **portfolio / CV project page**
