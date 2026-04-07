@@ -1,566 +1,235 @@
-\# Virtual Museum of Bulgarian History
-
-\### Interactive VR Educational Platform
-
-
-
-\*\*Project ID:\*\* 299  
-
-
-
-An interactive \*\*Virtual Reality (VR) educational platform\*\* that allows users to explore Bulgarian history inside an immersive 3D museum environment.
-
-
-
-The project recreates a \*\*virtual museum space\*\* where visitors can freely move, interact with historical exhibits, and listen to audio information about them.
-
-
-
-The goal of the project is to create a \*\*new type of educational experience\*\* that combines historical knowledge, interactivity, and modern visualization technologies.
-
-
+Here is a **clean, professional, GitHub-standard README** with a strong focus on **running the project**, while still preserving your technical and architectural detail.
 
 ---
 
+# Virtual Museum of Bulgarian History
 
+### Interactive VR Educational Platform
 
-\# Overview
-
-
-
-The Virtual Museum includes several thematic exhibitions:
-
-
-
-\### Shipka Epic
-
-Historical paintings such as:
-
-\- \*The Volunteers at Shipka\*
-
-\- \*The Battle of Shipka\*
-
-
-
-\### Panagyurishte Treasure
-
-\- Interactive artifacts
-
-\- 3D model of the main ceremonial vessel
-
-
-
-\### Bulgaria During World War II
-
-
-
-Inside each exhibition room, users can activate \*\*audio recordings\*\* that provide historical context and explanations.
-
-
+An immersive **Virtual Reality (VR) application** that enables users to explore Bulgarian history through an interactive 3D museum environment. The platform combines historical content, real-time interaction, and spatial audio to create a modern educational experience.
 
 ---
 
+# 🚀 Getting Started
 
+## Running the Application
 
-\# Technologies Used
+Follow these steps to launch the project:
 
+### 1. Clone the Repository
 
-
-\- \*\*Unity 6000.2.14f1\*\*
-
-\- \*\*C#\*\*
-
-\- \*\*XR Interaction Toolkit\*\*
-
-\- \*\*Action-based Input System\*\*
-
-\- \*\*XR Origin\*\*
-
-\- \*\*Unity Profiler\*\*
-
-\- \*\*Light Baking\*\*
-
-\- \*\*GitHub Version Control\*\*
-
-
-
-\### Hardware
-
-\- \*\*Oculus Quest 2\*\*
-
-
-
----
-
-
-
-\# Project Architecture
-
-
-
-The system is built using a \*\*modular architecture\*\*, which allows easy expansion and maintainability.
-
-
-
-Main modules:
-
-
-
-\### Navigation Module
-
-Handles movement inside the VR environment.
-
-
-
-Supported movement methods:
-
-\- Teleport navigation
-
-\- Smooth locomotion
-
-
-
-\### Interaction Module
-
-Allows interaction with 3D objects using VR controllers.
-
-
-
-Users can:
-
-\- Pick up objects
-
-\- Examine artifacts
-
-\- Trigger interactions
-
-
-
-Example:  
-
-Users can grab and inspect the \*\*Panagyurishte treasure vessel\*\* in 3D.
-
-
-
-\### Audio Module
-
-Plays historical narration when the user approaches an exhibit.
-
-
-
-Implementation:
-
-\- Trigger zones using \*\*Box Colliders\*\*
-
-\- `OnTriggerEnter()` activates the \*\*Audio Source\*\*
-
-
-
-\### Scene Management Module
-
-Handles loading of scenes using asynchronous loading.
-
-
-
+```bash
+git clone https://github.com/yavor-nikolov-buditel-highschool/BG-VR-History-Experience.git
 ```
 
+### 2. Navigate to the Build Directory
 
+Locate the compiled build inside the repository.
 
-SceneManager.LoadSceneAsync()
+### 3. Run the Executable
 
-
+Start the application by launching:
 
 ```
+bulgaria museum the virtual experience.exe
+```
 
-
-
-\### UI Module
-
-Responsible for:
-
-
-
-\- Main menu
-
-\- Settings
-
-\- System interface
-
-
-
-\### Data Module
-
-Stores information about:
-
-
-
-\- Exhibits
-
-\- Audio files
-
-\- Configuration settings
-
-
+> ⚠️ Ensure all `.dll` files and the `_Data` folder are in the same directory as the executable.
 
 ---
 
+## 🖥️ System Requirements
 
+### Hardware
 
-\# Development Process
+* VR Headset: **Oculus Quest 2 (recommended)**
+* PC capable of running VR applications
 
+### Performance Targets
 
-
-\## 1. Research and Concept
-
-Initial analysis of existing \*\*VR museum experiences worldwide\*\*.
-
-
-
-The project was inspired by virtual exhibitions used in major international museums.
-
-
-
-The idea was adapted to present \*\*Bulgarian history and cultural heritage\*\*.
-
-
+* **Target FPS:** 72 FPS
+* **Observed FPS:** 60–90 FPS
+* **Build Size:** ~1.6 GB
 
 ---
 
+# 🧭 Project Overview
 
+The application recreates a **virtual museum space** where users can:
 
-\## 2. Architecture Design
-
-
-
-The system was designed using a \*\*modular architecture\*\* to allow:
-
-
-
-\- Easy maintenance
-
-\- Expansion with new exhibitions
-
-\- Rapid feature implementation
-
-
+* Move freely using VR locomotion
+* Interact with historical artifacts
+* Explore curated exhibitions
+* Listen to contextual audio narration
 
 ---
 
+# 🏛️ Exhibitions
 
+### Shipka Epic
 
-\## 3. Development
+* *The Volunteers at Shipka*
+* *The Battle of Shipka*
 
+### Panagyurishte Treasure
 
+* Interactive artifacts
+* Detailed 3D ceremonial vessel
 
-Main development tasks included:
+### Bulgaria During World War II
 
-
-
-\- Creating virtual museum spaces
-
-\- Integrating 3D models
-
-\- Developing object interaction systems
-
-\- Implementing audio information triggers
-
-\- Implementing VR navigation
-
-\- Performance optimization
-
-
+Each exhibition includes **audio guides** triggered by proximity.
 
 ---
 
+# 🧩 Architecture
 
+The system follows a **modular architecture**, designed for scalability and maintainability.
 
-\## 4. Testing
+### Core Modules
 
+#### Navigation Module
 
+* Teleport movement
+* Smooth locomotion
 
-Usability testing was performed with users \*\*without prior VR experience\*\*.
+#### Interaction Module
 
+* Object manipulation via VR controllers
+* Artifact inspection
 
+#### Audio Module
 
-Testing helped improve:
+* Trigger-based narration
+* Uses `OnTriggerEnter()` with Audio Sources
 
+#### Scene Management
 
+```csharp
+SceneManager.LoadSceneAsync();
+```
 
-\- Navigation
+#### UI Module
 
-\- Interface
+* Main menu
+* Settings interface
 
-\- Interaction mechanics
+#### Data Module
 
-
-
-Special attention was given to \*\*VR motion sickness\*\*, which led to the implementation of two movement systems:
-
-
-
-\- Standard movement
-
-\- Teleport navigation
-
-
-
----
-
-
-
-\# Performance Optimization
-
-
-
-VR applications require \*\*high and stable FPS\*\* to prevent user discomfort.
-
-
-
-Optimization techniques used:
-
-
-
-\- Fully baked lighting
-
-\- Lightmaps
-
-\- Optimized meshes
-
-\- Unity Profiler performance analysis
-
-
-
-\### Performance Metrics
-
-
-
-| Metric | Value |
-
-|------|------|
-
-| PC FPS | 60–90 FPS |
-
-| Target FPS | 72 FPS |
-
-| Build Size | ~1.6 GB |
-
-
+* Exhibit metadata
+* Audio assets
+* Configuration
 
 ---
 
+# 🛠️ Technologies
 
-
-\# Application Features
-
-
-
-\### Main Menu
-
-Users can:
-
-
-
-\- Start the virtual museum
-
-\- Adjust audio settings
-
-\- Exit the application
-
-
-
-\### Inside the Museum
-
-Users can:
-
-
-
-\- Explore multiple exhibition halls
-
-\- Activate audio guides
-
-\- Interact with artifacts
-
-\- Navigate using teleport or locomotion
-
-
+* Unity 6000.2.14f1
+* C#
+* XR Interaction Toolkit
+* Action-based Input System
+* XR Origin
+* Unity Profiler
+* Light Baking
+* GitHub Version Control
 
 ---
 
+# ⚙️ Features
 
+## Main Menu
 
-\# 3D Assets
+* Start experience
+* Adjust audio settings
+* Exit application
 
+## In-Experience
 
-
-Two types of assets are used:
-
-
-
-\### Custom Models
-
-\- UI panels
-
-\- Parts of the museum architecture
-
-
-
-\### External Resources
-
-\- Sketchfab models
-
-\- Unity Asset Store assets
-
-
-
-All assets are used according to their respective licenses.
-
-
+* Explore multiple exhibition halls
+* Activate audio guides
+* Interact with 3D objects
+* Switch movement modes
 
 ---
 
+# ⚡ Performance Optimization
 
+To ensure a smooth VR experience:
 
-\# Target Users
-
-
-
-The system can be used by:
-
-
-
-\- Students
-
-\- Teachers
-
-\- Museums
-
-\- History enthusiasts
-
-\- Cultural institutions
-
-
+* Fully baked lighting
+* Lightmaps
+* Optimized meshes
+* Profiling via Unity Profiler
 
 ---
 
+# 🎨 Assets
 
+### Custom
 
-\# Marketing Strategy
+* UI panels
+* Museum architecture
 
+### External
 
+* Sketchfab models
+* Unity Asset Store assets
 
-The project is promoted through social media platforms:
-
-
-
-\- TikTok
-
-\- Instagram
-
-\- YouTube
-
-
-
-The content strategy uses \*\*short-form video hooks\*\* to capture audience attention in the first seconds of the video.
-
-
-
-Platform-specific hashtags are also used to improve reach.
-
-
+All assets are used בהתאם their respective licenses.
 
 ---
 
+# 👥 Target Users
 
-
-\# Future Development
-
-
-
-Potential future features include:
-
-
-
-\- AI-powered virtual museum guide
-
-\- Multilingual audio support (Bulgarian / English)
-
-\- WebVR version
-
-\- Additional historical exhibitions
-
-\- Interactive historical simulations where users can "enter" historical paintings
-
-
+* Students
+* Teachers
+* Museums
+* History enthusiasts
+* Cultural institutions
 
 ---
 
+# 🔮 Future Development
 
-
-\# Conclusion
-
-
-
-The project demonstrates the potential of \*\*Virtual Reality as a tool for education and cultural presentation\*\*.
-
-
-
-The platform combines:
-
-
-
-\- Interactive 3D environments
-
-\- Educational audio content
-
-\- VR interaction systems
-
-\- Modular software architecture
-
-
-
-The flexible architecture allows the project to be expanded with new exhibitions, artifacts, and features.
-
-
-
-The long-term goal is to \*\*modernize the way Bulgarian history is presented and learned\*\*, making it accessible to both local and international audiences.
-
-
+* AI-powered virtual guide
+* Multilingual support (Bulgarian / English)
+* WebVR version
+* Additional exhibitions
+* Interactive historical simulations
 
 ---
 
+# 👨‍💻 Authors
 
-
-\# Authors
-
-
-
-\*\*Yavor Nikolov\*\*  
-
-Private High School of Digital Sciences "SoftUni Buditel"  
-
-
-
-\*\*Viktor Devanathan\*\*  
-
+**Yavor Nikolov**
 Private High School of Digital Sciences "SoftUni Buditel"
 
-
+**Viktor Devanathan**
+Private High School of Digital Sciences "SoftUni Buditel"
 
 ---
 
+# 🎓 Supervisor
 
+**Nikolay Palashev**
+Teacher
 
-\# Supervisor
+---
 
+# 📌 Summary
 
+This project demonstrates how **Virtual Reality can transform education** by combining:
 
-\*\*Nikolay Palashev\*\*  
+* Interactive 3D environments
+* Immersive storytelling
+* Modular software architecture
 
-Teacher  
+The system is designed for **future expansion**, making it a scalable platform for presenting Bulgarian cultural heritage.
 
+---
 
+If you want, I can next:
 
-
-
-
-
+* Optimize this for **GitHub SEO (badges, screenshots, GIFs)**
+* Add a **“Releases” section + download button UX**
+* Or tailor it for a **portfolio / CV project page**
